@@ -69,34 +69,6 @@ def parse_arguments():
     parser.add_argument('--YELLOW_TIME', type=int, default=3, help='黄灯持续时间')
     parser.add_argument('--RED_TIME', type=int, default=2, help='红灯持续时间')
 
-    parser.add_argument('--inference_timesteps', type=int, default=5, help='推断网络的时间步长')
-    parser.add_argument('--inference_output_dim', type=int, default=4, help='推断网络的场景编码维度')
-    parser.add_argument('--N_positive', type=int, default=8, help='正样本数')
-    parser.add_argument('--N_mid_1', type=int, default=16, help='中间样本1数')
-    parser.add_argument('--N_mid_2', type=int, default=32, help='中间样本2数')
-    parser.add_argument('--N_negative', type=int, default=64, help='负样本数')
-    parser.add_argument('--TAU', type=float, default=0.3, help='推断网络温度系数')
-    parser.add_argument('--lambda_positive', type=float, default=2, help='正样本损失系数')
-    parser.add_argument('--lambda_mid_1', type=float, default=1, help='中间样本1损失系数')
-    parser.add_argument('--lambda_mid_2', type=float, default=0.5, help='中间样本2损失系数')
-    parser.add_argument('--lambda_negative', type=float, default=1, help='负样本损失系数')
-
-    parser.add_argument('--task_time', type=int, default=900, help='推断网络中一个场景任务的时长')
-    parser.add_argument('--timesteps_inference', type=int, default=5000, help='推断网络一个任务的时长')
-    parser.add_argument('--non_primary_flow_low', type=int, default=10, help='非主干道车流生成左区间')
-    parser.add_argument('--non_primary_flow_high', type=int, default=50, help='非主干道车流生成右区间')
-    parser.add_argument('--primary_flow_low_4', type=int, default=50, help='十字路口主干道车流生成左区间')
-    parser.add_argument('--primary_flow_high_4', type=int, default=200, help='十字路口主干道车流生成右区间')
-    parser.add_argument('--primary_flow_low_3', type=int, default=150, help='三岔路口主干道车流生成左区间')
-    parser.add_argument('--primary_flow_high_3', type=int, default=250, help='三岔路口主干道车流生成右区间')
-    parser.add_argument('--n_positive_sample', type=int, default=5, help='当前样本的前后5个样本都视为其正样本')
-    parser.add_argument('--inference_epoch', type=int, default=30, help='推断网络训练回合数')
-    parser.add_argument('--inference_batch_size', type=int, default=64, help='推断网络的批处理大小')
-
-    parser.add_argument('--task_num', type=int, default=3, help='元训练过程中每次采样的子任务数')
-    parser.add_argument('--episode_task_num', type=int, default=5, help='元训练时每个子任务的训练回合数')
-    parser.add_argument('--trajectory_len', type=int, default=64, help='元训练时每个任务的轨迹长度')
-    parser.add_argument('--episode_meta_learn', type=int, default=1000, help='元训练过程回合数')
 
 
 
